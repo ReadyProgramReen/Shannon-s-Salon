@@ -36,9 +36,17 @@ const Navbar = () => {
         <div>
             {
              token ? 
-                <div>
-                    <img src={profile_pic} alt="" />
-                    <img src={dropdown_icon} alt="" />
+                <div className='flex items-center gap-3 cursor-pointer mr-10 group relative' >
+                    <img className='w-8 rounded-full' src={profile_pic} alt="" />
+                    <img className='w-2.5' src={dropdown_icon} alt="" />
+
+                    <div className='absolute top-0 right-0 pt-14 text-base font-medium text-600 z-20 hidden group-hover:block'>
+                        <div className='min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4'>
+                            <p onClick={()=>navigate('/my-profile')} className='hover:text-black cursor-pointer'>My Profile</p>
+                            <p onClick={()=>navigate('/my-appointments')} className='hover:text-black cursor-pointer'>My Appointments</p>
+                            <p onClick={()=>navigate(setToken(false))} className='hover:text-black cursor-pointer'>Log out</p>
+                        </div>
+                    </div>
                 </div>
                   :
                  <button onClick={()=>navigate('/login')} className='bg-green-900 text-primary px-3 py-2 rounded-full font-bold hover:bg-green-700 hover:text-white mr-14 hidden md:block ' >Create Account</button>
