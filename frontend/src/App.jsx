@@ -7,6 +7,7 @@ import Myprofile from './pages/Myprofile'
 import Stylist from './pages/Stylist'
 import Myappointments from './pages/Myappointments'
 import Navbar from './components/Navbar'
+import Contact from './pages/Contact'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<Contact/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/my-profile' element={<Myprofile/>} />
         <Route path='/stylist' element={<Stylist/>} />
