@@ -8,7 +8,7 @@ const SpecialityMenu = () => {
       <h1 className="text-[#bb4537] text-center text-5xl font-bold my-9">
         Our Services
       </h1>
-      <hr className="mx-auto w-24 border-t-2 border-primary mb-8" />
+      <hr className="mx-auto w-24 border-t-2 border-primary mb-16" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {specialityData.map((item, index) => (
           <Link
