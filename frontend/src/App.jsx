@@ -11,7 +11,7 @@ import Contact from './pages/Contact'
 
 const App = () => {
   return (
-    <div className='text-green-500'>
+    <div className='text-green-500 '>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
