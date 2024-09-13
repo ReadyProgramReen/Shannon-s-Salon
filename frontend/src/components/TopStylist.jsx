@@ -32,7 +32,7 @@ const TopStylist = () => {
           ))}
         </div>
         
-        <button className='mt-6 px-10 py-3 bg-green-500 text-yellow-400 font-medium rounded-full hover:bg-green-600 transition-all'>
+        <button onClick={()=>{navigate('/stylist')}} className='mt-6 px-10 py-3 bg-green-500 text-yellow-400 font-medium rounded-full hover:bg-green-600 transition-all'>
           More
         </button>
       </div>
