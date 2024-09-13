@@ -13,7 +13,7 @@ const TopStylist = () => {
           Simply browse through our extensive list of licensed stylists
         </p>
         
-        <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-5 gap-y-6 px-3 mt-10 sm:px-0'>
+        <div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-5 gap-y-6 px-3 mt-10 sm:px-0'>
           {stylist.slice(0, 10).map((item, index) => (
             <div
             onClick={()=>{navigate(`/my-appointments/${item._id}`)}}
@@ -32,7 +32,7 @@ const TopStylist = () => {
           ))}
         </div>
         
-        <button onClick={()=>{navigate('/stylist')}} className='mt-6 px-10 py-3 bg-green-500 text-yellow-400 font-medium rounded-full hover:bg-green-600 transition-all'>
+        <button onClick={()=>{navigate('/stylist'); scrollTo(0,0)}} className='mt-6 px-10 py-3 bg-green-500 text-yellow-400 font-medium rounded-full hover:bg-green-600 transition-all'>
           More
         </button>
       </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SpecialityMenu = () => {
   return (
-    <div id="speciality" className="my-20">
+    <div id="speciality" className="my-20 mx-40">
       <h1 className="text-[#bb4537] text-center text-5xl font-bold my-9">
         Our Services
       </h1>
