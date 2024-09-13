@@ -11,6 +11,8 @@ const Salon = () => {
   // Get unique locations from the stylist data
   const locations = [...new Set(stylist.map(stylist => stylist.location))];
 
+  console.log(locations)
+
   return (
     < >
       <h1 className="text-[#af8e6d] text-center text-5xl font-bold my-9">Our Locations</h1>
@@ -35,8 +37,24 @@ const Salon = () => {
             className="text-[#af8e6d] text-center p-6 bg-black bg-opacity-50 w-[250px] rounded-lg cursor-pointer hover:text-yellow-500 hover:scale-105 transform transition-all duration-300"
           >
             <h2 className="text-4xl font-bold mb-4">{location}</h2>
-            {/* Add your location-specific address here */}
-           
+            {/* ternary operator */}
+
+            {location == "New York"? 
+
+            <p className='font-medium '>37th STREET TEST <br /> NY, NY, 10022</p> :
+
+            location == "Texas" ?
+
+            <p className='font-medium '>575 ROW TEST <br /> Richardson, TX , 75081</p> 
+            
+            :
+            
+            <p className='font-medium '>2676 Brickell TEST <br /> ATL, GA, 30341</p>
+
+
+
+            }
+
           </div>
         ))}
       </div>
