@@ -8,6 +8,7 @@ import Stylist from './pages/Stylist'
 import Myappointments from './pages/Myappointments'
 import Navbar from './components/Navbar'
 import Contact from './pages/Contact'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
 
 
       </Routes>
+      <Footer/>
     </div>
   )
 }

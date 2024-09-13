@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import profile_pic from "../assets/assets_frontend/profile_pic.png"
 import dropdown_icon from "../assets/assets_frontend/dropdown_icon.svg"
+import header_icon from '../assets/assets_frontend/header_img1.png'
+
 
 
 const Navbar = () => {
@@ -12,7 +14,15 @@ const Navbar = () => {
 
   return (
     <div className='flex item-center justify-between items-center  py-4 mb-5 border-b border-b-gray-400'>
-        <h1 className='text-green-900 text-3xl font-bold py-2 px-6 italic cursor-pointer' >Shannon's Salon</h1>
+         <div onClick={()=>{navigate('/')}} className="relative flex items-center ml-4">
+      {/* Image positioned behind the text */}
+      <img className="absolute w-12 left-4 top--5 -translate-x-6" src={header_icon} alt="Header Icon" />
+      {/* Text content */}
+      <h1 className="text-green-900 text-3xl font-bold px-6 italic cursor-pointer relative z-10">
+        Shannon's Salon
+      </h1>
+    </div>
+
 
     <ul className='hidden md:flex items-start gap-16  py-2 font-semibold ' >
         <NavLink to={'/'}>
