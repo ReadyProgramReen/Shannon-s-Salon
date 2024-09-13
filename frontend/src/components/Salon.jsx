@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import salon_bg from '../assets/assets_frontend/salon.png';
 import { useNavigate } from 'react-router-dom';
-import { stylist } from '../assets/assets_frontend/assets';
+import { AppContext } from '../context/AppContext';
 
 const Salon = () => {
   const navigate = useNavigate();
+  const {stylist} = useContext(AppContext)
+
 
   // Get unique locations from the stylist data
   const locations = [...new Set(stylist.map(stylist => stylist.location))];
